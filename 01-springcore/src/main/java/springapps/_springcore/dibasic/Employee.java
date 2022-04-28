@@ -2,6 +2,7 @@ package springapps._springcore.dibasic;
 
 public class Employee {
 	private int id;
+	private int age;
 	private String name;
 
 	public int getId() {
@@ -22,6 +23,14 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + "]";
+		return "Employee [id=" + id + ", name=" + name + ", age="+ age +"]";
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 }

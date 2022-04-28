@@ -8,8 +8,17 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="emp"
-		class="springapps._springcore.dibasic.Employee"
-		p:id="1" p:name="Jaideep" p:age="22" />
-		
+	<bean name="hosp" class="springapps._springcore.list.Hospital">
+		<property name="name">
+			<value>Apollo Hospital</value>
+		</property>
+		<property name="departments">
+			<list>
+				<value>Reception</value>
+				<value>Emergency</value>
+				<value>ICU</value>
+			</list>
+		</property>
+	</bean>
+
 </beans>
