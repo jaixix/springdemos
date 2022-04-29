@@ -8,30 +8,17 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="hosp" class="springapps._springcore.list.Hospital">
+	<bean name="cars" class="springapps._springcore.set.CarDealer">
 		<property name="name">
-			<value>Apollo Hospital</value>
+			<value>Lamborghini</value>
 		</property>
-		<property name="departments">
-			<list>
-				<value>Reception</value>
-				<value>Emergency</value>
-				<value>ICU</value>
-			</list>
+		<property name="models">
+			<set>
+				<value>Aventador</value>
+				<value>Hurracan</value>
+				<value>SV</value>
+				<value>Gallardo</value>
+			</set>
 		</property>
 	</bean>
-	
-	<bean name="hosp2" class="springapps._springcore.list.Hospital">
-		<property name="name">
-			<value>Medanta Hospital</value>
-		</property>
-		<property name="departments">
-			<list>
-				<value>Reception</value>
-				<value>Emergency</value>
-				<value>ICU</value>
-			</list>
-		</property>
-	</bean>
-
 </beans>
