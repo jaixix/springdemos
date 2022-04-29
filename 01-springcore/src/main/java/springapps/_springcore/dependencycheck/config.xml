@@ -8,10 +8,14 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="patient" class="springapps._springcore.lifecycle.annotations.Patient"
-	p:id="1"/>
-	
-	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" /> -->
-	<context:annotation-config/>
-	
+	<bean name="prescriptions" class="springapps._springcore.dependencycheck.Prescription"
+	p:id="1" p:patientName="Mukesh">
+		<property name="medicines">
+			<list>
+				<value>Crocin 500</value>
+				<value>Dolo 650</value>
+			</list>
+		</property>
+	</bean>
+	<context:annotation-config />
 </beans>
