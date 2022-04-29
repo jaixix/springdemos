@@ -8,13 +8,48 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="items" class="springapps._springcore.shoppingcart.Items"
+	<!--  <bean name="item" class="springapps._springcore.shoppingcart.Item"
 	p:id="1" p:itemName="Milk" p:price="120" p:quantity="2"/>
 	
 	<bean name="shoppingcart" class="springapps._springcore.shoppingcart.ShoppingCart"
 		p:customerName="Jaideep">
 		<property name="items">
-			<ref bean="items"></ref>
+			<ref bean="item"></ref>
 		</property>
 	</bean>
+	-->
+	
+	<bean name="listitems" class="springapps._springcore.shoppingcart.Items">
+		<property name="items">
+			<map>
+				<entry key="Bread">
+					<map>
+						<entry key="quantity" value="2"/>
+						<entry key="price" value="80"/>
+					</map>
+				</entry>
+				<entry key="Milk">
+					<map>
+						<entry key="quantity" value="5"/>
+						<entry key="price" value="200"/>
+					</map>
+				</entry>
+				<entry key="Eggs">
+					<map>
+						<entry key="quantity" value="12"/>
+						<entry key="price" value="75"/>
+					</map>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+	<bean name="shoppingcart" class="springapps._springcore.shoppingcart.ShoppingCart"
+		p:customerName="Jaideep">
+		<property name="items">
+			<ref bean="listitems"></ref>
+		</property>
+	</bean>
+	
+	
 </beans>

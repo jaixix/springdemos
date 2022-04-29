@@ -1,48 +1,21 @@
 package springapps._springcore.shoppingcart;
 
-import java.util.List;
+import java.util.Map;
 
 public class Items {
-	private int id;
-	private String itemName;
-	private double price;
-	private int quantity;
+	private Map<String, Map<String, Integer>> items;
 
-	public int getId() {
-		return id;
+	public Map<String, Map<String, Integer>> getItems() {
+		return items;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getItemName() {
-		return itemName;
-	}
-
-	public void setItemName(String itemName) {
-		this.itemName = itemName;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+	public void setItems(Map<String, Map<String, Integer>> items) {
+		this.items = items;
 	}
 
 	@Override
 	public String toString() {
-		return "Items [id=" + id + ", itemName=" + itemName + ", price=" + price + ", quantity=" + quantity + "]";
+		return "Items [items=" + items + "]";
 	}
 
 }

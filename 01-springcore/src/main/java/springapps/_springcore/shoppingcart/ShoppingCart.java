@@ -2,6 +2,7 @@ package springapps._springcore.shoppingcart;
 
 public class ShoppingCart {
 	private String customerName;
+//	private Item items;
 	private Items items;
 
 	public String getCustomerName() {
