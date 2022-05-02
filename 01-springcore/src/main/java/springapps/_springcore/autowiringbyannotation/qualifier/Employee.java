@@ -1,11 +1,15 @@
-package springapps._springcore.autowiringbyannotation;
+package springapps._springcore.autowiringbyannotation.qualifier;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee {
 	private int id;
 	private int age;
 	private String name;
+	
+	@Autowired
+	@Qualifier("addressInChennai")
 	private Address address;
 
 	public int getId() {
@@ -41,7 +45,6 @@ public class Employee {
 		return address;
 	}
 	
-	@Autowired //can also be done at property or constructor level.
 	public void setAddress(Address address) {
 		this.address = address;
 	}
