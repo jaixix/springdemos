@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="scores"
+		class="springdemos._springselfprac.reftypes.Scores" p:chemistry="99"
+		p:physics="92" p:maths="95" />
+
+	<bean name="student"
+		class="springdemos._springselfprac.reftypes.Student" p:id="1"
+		p:name="Jaideep">
+		<property name="scores">
+			<ref bean="scores" />
+		</property>
+	</bean>
+
+		<context:annotation-config />
+</beans>

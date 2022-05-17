@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="items"
+		class="springdemos._springselfprac.foursoppingcart.Items">
+		<property name="items">
+			<map>
+				<entry key="Milk">
+					<map>
+						<entry key="quantity" value="2"></entry>
+						<entry key="price" value="60"></entry>
+					</map>
+				</entry>
+				<entry key="Bread">
+					<map>
+						<entry key="quantity" value="5"></entry>
+						<entry key="price" value="100"></entry>
+					</map>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean name="cart"
+		class="springdemos._springselfprac.foursoppingcart.ShoppingCart"
+		p:customerName="Jaideep">
+		<property name="items">
+			<ref bean="items" />
+		</property>
+	</bean>
+
+	<context:annotation-config />
+</beans>
