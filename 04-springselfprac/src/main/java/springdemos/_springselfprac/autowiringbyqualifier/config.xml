@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="addressInLucknow"
+		class="springdemos._springselfprac.autowiringbyqualifier.Address"
+		p:houseNumber="101" p:street="Manisha Mandir Marg" p:city="Lucknow" />
+
+	<bean name="addressInMumbai"
+		class="springdemos._springselfprac.autowiringbyqualifier.Address"
+		p:houseNumber="101" p:street="Manisha Mandir Marg" p:city="Mumbai" />
+
+	<bean name="emp"
+		class="springdemos._springselfprac.autowiringbyqualifier.Employee"
+		p:id="1" p:age="22" p:name="Jaideep" />
+
+	<context:annotation-config />
+</beans>
